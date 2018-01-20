@@ -13,10 +13,7 @@ api = Api(app, version='1.0', title='ATT Open Issues API',
 #att_model = api.model('AttOpenIssues',{'id':fields.Integer('ID')})
 CLIENT_ID = config('CLIENT_ID')
 CLIENT_SECRET = config('CLIENT_SECRET')
-@api.route('/home')
-class HomePage(Resource):
-	def get(self):
-		return {'hey': 'Hello'}
+
 @api.route('/att-open-issues')
 #@api.doc(params={'id': 'An ID'})
 class AttOpenIssues(Resource):
@@ -26,9 +23,7 @@ class AttOpenIssues(Resource):
     Attributes:CLIENT_ID and CLIENT_SECRET: Required for large rate limit
     """
     
-    #def __init__(self):
-    #    self.CLIENT_ID = 'a97ff4644e7bd5156957'#config('CLIENT_ID')
-    #    self.CLIENT_SECRET = '8dfb7c9f6cb9c2b1d574b2126ebbb2e23fdb11b6'#config('CLIENT_SECRET')
+    
     def get_modified_list(self,obj):
     	#returns updated open issues list with comments if exists
     	#Parameters: Obj- list all att open issues from public repos
