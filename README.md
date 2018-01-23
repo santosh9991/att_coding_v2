@@ -89,6 +89,4 @@ Utilized [Swagger](http://swagger.org/) for API versioning.
 
 * **Santosh Kesireddy** - *Initial work* - [Santosh9991](https://github.com/santosh9991)
 
-## Acknowledgments
 
-* Special thanks to Yogi for suggestions 
